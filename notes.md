@@ -3,6 +3,6 @@
 git status
 git pull
 git add
-git commit
+git commit -am "Commit message goes here"
 git push
 ```
