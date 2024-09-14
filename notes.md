@@ -1,4 +1,6 @@
-# Common Git Commands:
+# GitHub
+GitHub is a useful way to store your files for a project all together. It allows you to work on projects together, and have backups in case things go wrong.
+## Common Git Commands:
 ```
 git status
 git pull
