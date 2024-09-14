@@ -8,3 +8,9 @@ git add
 git commit -am "Commit message goes here"
 git push
 ```
+
+# AWS
+## SSHing into website
+```
+ssh -i ../keyFileLocation ubuntu@IpAddress
+```
