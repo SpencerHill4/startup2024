@@ -1,4 +1,4 @@
-#Common Git Commands:
+# Common Git Commands:
 ```
 git status
 git pull
