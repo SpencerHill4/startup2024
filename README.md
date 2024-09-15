@@ -12,6 +12,10 @@ First move:
 ![Player's first move](https://github.com/SpencerHill4/startup2024/blob/main/startUpSpec/BlockBonanzaMove1.jpg)
 Second move:
 ![Player's second move](https://github.com/SpencerHill4/startup2024/blob/main/startUpSpec/BlockBonanzaMove2.jpg)
+Third move:
+![Player's third move](https://github.com/SpencerHill4/startup2024/blob/main/startUpSpec/BlockBonanzaMove3.jpg)
+Fourth move:
+![Player's fourth move](https://github.com/SpencerHill4/startup2024/blob/main/startUpSpec/BlockBonanzaMove4.jpg)
 ### Key Features
 - Secure login over HTTPS
 - Ability to start new game
