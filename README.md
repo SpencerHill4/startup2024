@@ -7,15 +7,15 @@
 ### Elevator Pitch
 Have you ever been bored or only had a 5 minute break in a busy schedule? Well, I'd like to introduce to you Block Bonanza! This grid based game will have you moving your square from space to space absorbing smaller cubes before they can become bigger than you. As the game progresses the faster and harder the game gets. Your goal is to see how long you can last, represented by how many points you can get per game. If a cube becomes too big for you to absorb, then you can no longer move to that space. The game ends when can no longer move. Want a competitive experience? Try to get a higher highscore than your friends and/or the top 10 high scores! See if you can become number one!
 ### Design
-Note: There is a typo in the images (Bananza instead of Bonanza).
+**Note: There is a typo in the images (Bananza instead of Bonanza).**
 ![Concept image of what users will see at the beginning of a game.](https://github.com/SpencerHill4/startup2024/blob/main/startUpSpec/BlockBonanzaStart.jpg)
-First move:
+**First move:**
 ![Player's first move](https://github.com/SpencerHill4/startup2024/blob/main/startUpSpec/BlockBonanzaMove1.jpg)
-Second move:
+**Second move:**
 ![Player's second move](https://github.com/SpencerHill4/startup2024/blob/main/startUpSpec/BlockBonanzaMove2.jpg)
-Third move:
+**Third move:**
 ![Player's third move](https://github.com/SpencerHill4/startup2024/blob/main/startUpSpec/BlockBonanzaMove3.jpg)
-Fourth move:
+**Fourth move:**
 ![Player's fourth move](https://github.com/SpencerHill4/startup2024/blob/main/startUpSpec/BlockBonanzaMove4.jpg)
 ### Key Features
 - Secure login over HTTPS
