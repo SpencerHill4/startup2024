@@ -23,4 +23,4 @@ How I plan to use the following technologies:
 	- Retrieving highscores
 	- Updating highscores
 - **DB/Login** - Store users and their highscores in database. Register and login users. Credential are securely stored in database. Can't play the game unless authenticated.
-- **WebSocket** - The player's score and the top 10 highscores are updated in realtime.
+- **WebSocket** - The top 10 highscores are updated in realtime.
