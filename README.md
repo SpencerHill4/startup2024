@@ -38,7 +38,7 @@ How I plan to use the following technologies:
 
 ## HTML Deliverable
 For this deliverable I built out the structure of my application using HTML.
--   **HTMLE pages** - Four HTML pages: home page, play page (the game itself), score page (the highscores), about page
+-   **HTML pages** - Four HTML pages: home page, play page (the game itself), score page (the highscores), about page
 -   **Links** - Each page has all the links to each page at the top.
 -   **Text** - Each highscore, the current player, the current score, and the about description are all is represented as text discription.
 -   **Images** - The game uses an image placeholder to represent what the game will look like.
