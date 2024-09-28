@@ -38,9 +38,9 @@ How I plan to use the following technologies:
 
 ## HTML Deliverable
 For this deliverable I built out the structure of my application using HTML.
-[x] **HTMLE pages** - Four HTML pages: home page, play page (the game itself), score page (the highscores), about page
-[x] **Links** - Each page has all the links to each page at the top.
-[x] **Text** - Each highscore, the current player, the current score, and the about description are all is represented as text discription.
-[x] **Images** - The game uses an image placeholder to represent what the game will look like.
-[x] **DB/Login** - The highscores rpresent the realtime top 10 highscores for every user.
-[x] **WebSocket**
+-   **HTMLE pages** - Four HTML pages: home page, play page (the game itself), score page (the highscores), about page
+-   **Links** - Each page has all the links to each page at the top.
+-   **Text** - Each highscore, the current player, the current score, and the about description are all is represented as text discription.
+-   **Images** - The game uses an image placeholder to represent what the game will look like.
+-   **DB/Login** - Input boxes for username and password. The highscores will be pulled from the database.
+-   **WebSocket** - The highscores rpresent the realtime top 10 highscores for every user.
