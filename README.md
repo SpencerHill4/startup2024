@@ -35,3 +35,12 @@ How I plan to use the following technologies:
 	- Updating highscores
 - **DB/Login** - Store users and their highscores in database. Register and login users. Credential are securely stored in database. Can't play the game unless authenticated.
 - **WebSocket** - The player's highscore and the top 10 highscores are updated in realtime.
+
+## HTML Deliverable
+For this deliverable I built out the structure of my application using HTML.
+[x] **HTMLE pages** - Four HTML pages: home page, play page (the game itself), score page (the highscores), about page
+[x] **Links** - Each page has all the links to each page at the top.
+[x] **Text** - Each highscore, the current player, the current score, and the about description are all is represented as text discription.
+[x] **Images** - The game uses an image placeholder to represent what the game will look like.
+[x] **DB/Login** - The highscores rpresent the realtime top 10 highscores for every user.
+[x] **WebSocket**
