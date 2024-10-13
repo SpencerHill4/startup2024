@@ -4,3 +4,8 @@ td {
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+
+.table-wrapper {
+  max-height: 100px;
+  overflow-y: auto;
+}
