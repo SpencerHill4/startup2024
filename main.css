@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+}
+
+header {
+    flex: 0 80px;
+}
+
+ul {
+    margin-left: 0;
+}
+
+.navbar-brand {
+    padding-left: 0.3em;
+}
+  
+.nav-item {
+    padding: 0 0.3em;
+}
