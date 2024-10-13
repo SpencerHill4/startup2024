@@ -49,7 +49,7 @@ For this deliverable I built out the structure of my application using HTML.
 For this deliverable I properly styled the application into its final appearance.
 - **Header, footer, and main content body**
 - **Navigation elements** - I made them into navbar items.
-- **Responsive to window resizing** - It works for any window size and device. Though I may tinker with the play a bit more.
-- **Application elements** - The constrast is good, and the whitespace is good, though it looks best on my laptop. I'll need to tinker to see I can get spacing to be more consistent.
-- **Application text content** - The fonts are all consistent
+- **Responsive to window resizing** - It works for any window size and device.
+- **Application elements** - The constrast is good, and the whitespace is good, though it looks best on my laptop.
+- **Application text content** - The fonts are all consistent.
 - **Application images** - The logo has been properly stylized and it is responsive.
