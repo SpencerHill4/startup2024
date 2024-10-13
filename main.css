@@ -1,6 +1,11 @@
+html {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
+    height: 100%;
     min-width: 375px;
 }
 
@@ -9,7 +14,10 @@ header {
 }
 
 ul {
-    margin-left: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: row !important;
+    list-style: none;
 }
 
 .navbar-brand {
@@ -17,5 +25,21 @@ ul {
 }
   
 .nav-item {
-    padding: 0 0.3em;
+    padding: 0 0.4em;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer {
+    flex: 0 40px;
+}
+
+footer a {
+    float: right;
 }
