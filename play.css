@@ -1,0 +1,41 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.space {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.square {
+    width: 20%;
+    height: 20%;
+    background-color: orange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 2s, height 2s;
+}
+
+.growing {
+    width: 100%;
+    height: 100%;
+}
+
+.player {
+    background-color: blue;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
