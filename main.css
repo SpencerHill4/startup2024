@@ -13,25 +13,40 @@ header {
     flex: 0 80px;
 }
 
+img {
+    width: 100%;
+    max-width: 70px;
+    height: auto;
+}
+
 ul {
     flex: 1;
     display: flex;
     flex-direction: row !important;
     list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
-img {
+.navbar {
     width: 100%;
-    max-width: 50px;
-    height: auto;
 }
 
 .navbar-brand {
     padding-left: 0.3em;
 }
-  
+
+.navbar-nav {
+    margin-left: 0;
+}
+
 .nav-item {
     padding: 0 0.4em;
+    margin-right: 10px;
+}
+
+.navbar-nav.flex-row {
+    flex-grow: 1;
 }
 
 main {
