@@ -1,3 +1,11 @@
+div {
+    font-size: 20px;
+}
+
+span {
+    padding: 2em;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
