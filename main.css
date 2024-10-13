@@ -11,6 +11,7 @@ body {
 
 header {
     flex: 0 80px;
+    background-color: rgb(8, 22, 127);
 }
 
 img {
@@ -55,6 +56,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+    background-color: #045;
 }
 
 footer {
