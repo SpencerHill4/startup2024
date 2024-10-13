@@ -44,3 +44,12 @@ For this deliverable I built out the structure of my application using HTML.
 -   **Images** - The game uses an image placeholder to represent what the game will look like.
 -   **DB/Login** - Input boxes for username and password. The highscores will be pulled from the database.
 -   **WebSocket** - The highscores rpresent the realtime top 10 highscores for every user.
+
+## CSS Deliverable
+For this deliverable I properly styled the application into its final appearance.
+- **Header, footer, and main content body**
+- **Navigation elements** - I made them into navbar items.
+- **Responsive to window resizing** - It works for any window size and device. Though I may tinker with the play a bit more.
+- **Application elements** - The constrast is good, and the whitespace is good, though it looks best on my laptop. I'll need to tinker to see I can get spacing to be more consistent.
+- **Application text content** - The fonts are all consistent
+- **Application images** - The logo has been properly stylized and it is responsive.
