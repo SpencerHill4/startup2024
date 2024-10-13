@@ -1,11 +1,7 @@
-td {
-    max-width: 40vw;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
 .table-wrapper {
-  max-height: 100px;
-  overflow-y: auto;
+  margin-top: 1cm;
+}
+
+table {
+  width: 100%;
 }

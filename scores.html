@@ -19,93 +19,146 @@
     <body class="bg-dark text-light">
         <header class="container-fluid">
             <nav class="navbar fixed-top navbar-dark">
-                <a class="navbar-brand" href="#">
-                    <img src="BlockBonanzaIcon.png">
-                    Block Bonanza
-                </a>
-                <ul class="navbar-nav flex-row me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="play.html">Play</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="scores.html">Scores</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                </ul>
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="BlockBonanzaIcon.png">
+                        Block Bonanza
+                    </a>
+                    <ul class="navbar-nav flex-row me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="play.html">Play</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="scores.html">Scores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </header>
-        <main class="bg-secondary text-center">
-            <div class="container mt-3">
-                <div class="table-wrapper">
-                    <h2 class="text-reset">Top 10 - Highscores</h2>
-                    <table class="table table-warning table-striped-columns">
-                        <thead class="table-dark">
-                            <tr>
-                                <th>#</th>
-                                <th>Username</th>
-                                <th>Score</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>1</th>
-                                <th>jeffman</th>
-                                <th>20,000</th>
-                            </tr>
-                            <tr>
-                                <th>2</th>
-                                <th>coolguy4</th>
-                                <th>19,980</th>
-                            </tr>
-                            </tr>
-                                <th>3</th>
-                                <th>Kat</th>
-                                <th>17,380</th>
-                            </tr>
-                            <tr>
-                                <th>4</th>
-                                <th>jimmy</th>
-                                <th>17,020</th>
-                            </tr>
-                            <tr>
-                                <th>5</th>
-                                <th>ZigzagZapper</th>
-                                <th>16,440</th>
-                            </tr>
-                            <tr>
-                                <th>6</th>
-                                <th>spencerHill4</th>
-                                <th>12,240</th>
-                            </tr>
-                            <tr>
-                                <th>7</th>
-                                <th>InsertNameHere</th>
-                                <th>7,020</th>
-                            </tr>
-                            <tr>
-                                <th>8</th>
-                                <th>FrostedNinja3</th>
-                                <th>6,980</th>
-                            </tr>
-                            <tr>
-                                <th>9</th>
-                                <th>Gr8N8</th>
-                                <th>6,880</th>
-                            </tr>
-                            <tr>
-                                <th>10</th>
-                                <th>steve</th>
-                                <th>6,860</th>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <main class="container mt-3 bg-secondary text-center">
+            <table class="table table-striped-columns table-dark">
+                <tbody>
+                    <tr>
+                       <th scope="row">1</th>
+                       <td>jeffman</td>
+                       <td>20,000</td> 
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>coolguy4</td>
+                        <td>19,980</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Kat</td>
+                        <td>17,380</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>jimmy</td>
+                        <td>17,020</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>ZigzagZapper</td>
+                        <td>16,440</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>spencerHill4</td>
+                        <td>12,240</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>InsertNameHere</td>
+                        <td>7,020</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>FrostedNinja3</td>
+                        <td>6,980</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>Gr8N8</td>
+                        <td>6,880</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>steve</td>
+                        <td>6,860</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--<div call="table-wrapper">
+                <table class="table table-warning table-striped-columns">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Username</th>
+                            <th scope="col">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>jeffman</td>
+                            <td>20,000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>coolguy4</td>
+                            <td>19,980</td>
+                        </tr>
+                        </tr>
+                            <th scope="row">3</th>
+                            <td>Kat</td>
+                            <td>17,380</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>jimmy</td>
+                            <td>17,020</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>ZigzagZapper</td>
+                            <td>16,440</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>spencerHill4</td>
+                            <td>12,240</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>InsertNameHere</td>
+                            <td>7,020</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">8</th>
+                            <td>FrostedNinja3</td>
+                            <td>6,980</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">9</th>
+                            <td>Gr8N8</td>
+                            <td>6,880</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>steve</td>
+                            <td>6,860</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>-->
             
             
             <!--<div>
