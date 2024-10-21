@@ -56,15 +56,15 @@ ssh -i ../keyFileLocation ubuntu@IpAddress
   }
 14. Displaying an image with a hyperlink in HTML:
 - < a href="https://example.com">
-    <img src="image.jpg" alt="Example Image">
-  </a>
+    < img src="image.jpg" alt="Example Image">
+  < /a>
 15. CSS box model layers ordering:
 - Content
 - Padding
 - Border
 - Margin
 16. Setting the text "trouble" to green:
-- &ltp><span style="color: green;"></span>double</p>
+- < p>< span style="color: green;">< /span>double< /p>
 17. For loop and console.log output:
 - for (let i = 0; i < 3; i++) {
     console.log(i);
@@ -101,10 +101,10 @@ ssh -i ../keyFileLocation ubuntu@IpAddress
 23. Adding new properties to JavaScript objects: Yes, you can add new properties dynamically: obj.newKey = 'newValue';
 24. Including JavaScript on an HTML page: <script src="script.js"></script>
 25. Setting text "animal" to "crow" using JavaScript:
-- &ltp id="animal">fish</p>
-  <script>
+- < p id="animal">fish</p>
+  < script>
     document.getElementById('animal').innerText = 'crow';
-  </script>
+  < /script>
 26. Describing JSON: JSON is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate.
 27. Common console commands:
 - chmod: Change file permissions
