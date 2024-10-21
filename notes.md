@@ -14,3 +14,6 @@ git push
 ```
 ssh -i ../keyFileLocation ubuntu@IpAddress
 ```
+
+# Midterm
+1. <link> is used to link external resources to the HTML document (i.e. CSS stylesheets) and is self-closing and usually placed in the <head> section.
