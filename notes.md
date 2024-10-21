@@ -64,7 +64,7 @@ ssh -i ../keyFileLocation ubuntu@IpAddress
 - Border
 - Margin
 16. Setting the text "trouble" to green:
-- /*<p><span style="color: green;"></span>double</p>*/
+- <p><span style="color: green;"></span>double</p>
 17. For loop and console.log output:
 - for (let i = 0; i < 3; i++) {
     console.log(i);
