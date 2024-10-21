@@ -16,8 +16,8 @@ ssh -i ../keyFileLocation ubuntu@IpAddress
 ```
 
 # Midterm
-1. <link> is used to link external resources to the HTML document (i.e. CSS stylesheets) and is self-closing and usually placed in the <head> section.
-2. <div> is a block-level container that is used to group HTML elements together.
+1. &ltlink> is used to link external resources to the HTML document (i.e. CSS stylesheets) and is self-closing and usually placed in the <head> section.
+2. &ltdiv> is a block-level container that is used to group HTML elements together.
 3. #title targets an element with the specific id title, while .grid targets elements witht the class grid.
 4. Padding is the space between the content and the border of an element, while margin is the space outside the border, between the element and neighboring elements.
 5. With a flexbox, images inside a flex container can be arranged in a row or column, and can be aligned and justified in various ways.
@@ -55,16 +55,16 @@ ssh -i ../keyFileLocation ubuntu@IpAddress
     background-color: red;
   }
 14. Displaying an image with a hyperlink in HTML:
-- <a href="https://example.com">
+- &lta href="https://example.com">
     <img src="image.jpg" alt="Example Image">
-  </a>
+  &lt/a>
 15. CSS box model layers ordering:
 - Content
 - Padding
 - Border
 - Margin
 16. Setting the text "trouble" to green:
-- <p><span style="color: green;"></span>double</p>
+- &ltp><span style="color: green;"></span>double</p>
 17. For loop and console.log output:
 - for (let i = 0; i < 3; i++) {
     console.log(i);
@@ -101,7 +101,7 @@ ssh -i ../keyFileLocation ubuntu@IpAddress
 23. Adding new properties to JavaScript objects: Yes, you can add new properties dynamically: obj.newKey = 'newValue';
 24. Including JavaScript on an HTML page: <script src="script.js"></script>
 25. Setting text "animal" to "crow" using JavaScript:
-- <p id="animal">fish</p>
+- &ltp id="animal">fish</p>
   <script>
     document.getElementById('animal').innerText = 'crow';
   </script>
