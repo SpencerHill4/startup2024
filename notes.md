@@ -23,7 +23,7 @@ ssh -i ../keyFileLocation ubuntu@IpAddress
 5. With a flexbox, images inside a flex container can be arranged in a row or column, and can be aligned and justified in various ways.
 - .flex-container {
 -     display: flex;
--     flex-direction: row; /* or alignment */
+-     flex-direction: row; /* or column */
 -     justify-content: center; /* alignment */
 -     align-items: center; /* alignment */
 - }
