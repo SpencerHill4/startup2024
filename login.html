@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+
+        <link rel="icon" href="favicon.ico" />
+
+        <link rel="stylesheet" href="main.css" />
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+        crossorigin="anonymous"
+        />
+    </head>
+    <body class="text-light">
+        <header class="container-fluid">
+            <nav class="navbar fixed-top navbar-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="BlockBonanzaIcon.png">
+                        Block Bonanza
+                    </a>
+                    <ul class="navbar-nav flex-row me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="play.html">Play</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="scores.html">Scores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="container-fluid text-center">
+            <nav>
+                <h2>Welcome to Block Bonanza!</h2>
+                <form method="get" action="play.html">
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="text" placeholder="username" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="password" placeholder="password" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-secondary">Create</button>
+                </form>
+            </nav>
+        </main>
+        <footer class="bg-dark text-white-50">
+            <div class="container-fluid">
+                <span class="text-reset">Spencer Hill</span>
+                <a class="text-reset" href="https://github.com/SpencerHill4/startup2024">GitHub</a>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
