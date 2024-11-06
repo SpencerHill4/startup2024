@@ -1,69 +1,63 @@
-.html {
-    height: 100%;
-}
-
 .body {
     display: flex;
     flex-direction: column;
-    height: 100%;
     min-width: 375px;
-}
-
-.header {
+  }
+  
+  header {
     flex: 0 80px;
     background-color: rgb(8, 22, 127);
-}
-
-.img {
-    width: 100%;
-    max-width: 70px;
-    height: auto;
-}
-
-.ul {
-    flex: 1;
-    display: flex;
-    flex-direction: row !important;
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-.navbar {
-    width: 100%;
-}
-
-.navbar-brand {
-    padding-left: 0.3em;
-}
-
-.navbar-nav {
-    margin-left: 0;
-}
-
-.nav-item {
-    padding: 0 0.4em;
-    margin-right: 10px;
-}
-
-.navbar-nav.flex-row {
-    flex-grow: 1;
-}
-
-.main {
-    flex: 1;
+  }
+  
+  main {
+    flex: 1 calc(100vh - 110px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
+    
     background-color: #045;
-}
+  }
+  
+  footer {
+    flex: 0 30px;
+  }
+  
+  menu {
+    flex: 1;
+    display: flex;
+    /*  overwrite Bootstrap so the menu does not wrap */
+    flex-direction: row !important;
+    list-style: none;
+  }
+  
+  .navbar-brand {
+    padding-left: 0.3em;
+  }
 
-.footer {
-    flex: 0 40px;
-}
-
-.footer a {
+  img {
+    width: 100%;
+    max-width: 70px;
+    height: auto;
+  }
+  
+  menu .nav-item {
+    padding: 0 0.3em;
+  }
+  
+  footer a {
     float: right;
-}
+  }
+  
+  @media (max-height: 600px) {
+    /*header {
+      display: none;
+    }
+    footer {
+      display: none;
+    }*/
+    main {
+      flex: 1 100vh;
+    }
+  }
+  
