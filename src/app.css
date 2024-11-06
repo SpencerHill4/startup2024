@@ -1,26 +1,26 @@
-html {
+.html {
     height: 100%;
 }
 
-body {
+.body {
     display: flex;
     flex-direction: column;
     height: 100%;
     min-width: 375px;
 }
 
-header {
+.header {
     flex: 0 80px;
     background-color: rgb(8, 22, 127);
 }
 
-img {
+.img {
     width: 100%;
     max-width: 70px;
     height: auto;
 }
 
-ul {
+.ul {
     flex: 1;
     display: flex;
     flex-direction: row !important;
@@ -50,7 +50,7 @@ ul {
     flex-grow: 1;
 }
 
-main {
+.main {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -60,10 +60,10 @@ main {
     background-color: #045;
 }
 
-footer {
+.footer {
     flex: 0 40px;
 }
 
-footer a {
+.footer a {
     float: right;
 }
