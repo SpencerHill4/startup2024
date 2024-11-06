@@ -1,0 +1,17 @@
+{
+  "name": "startup2024",
+  "version": "1.0.0",
+  "description": "[Notes](https://github.com/SpencerHill4/startup2024/blob/main/notes.md) for this class.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}
