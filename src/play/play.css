@@ -1,20 +1,37 @@
-div {
-    font-size: 20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-span {
-    padding: 2em;
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+.score {
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .grid {
-    margin-top: 0;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 0;
-    width: 400px;
-    height: 400px;
+    width: 90vw;
+    max-width: 420px;
+    height: 90vw;
+    max-height: 420px;
     text-align: center;
     border: 2px solid black;
 }
@@ -48,4 +65,19 @@ span {
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+/* Media query for smaller screens */
+@media (max-height: 600px) {
+    .grid {
+        max-width: 320px;
+        max-height: 320px;
+    }
+}
+
+@media (max-height: 500px) {
+    .grid {
+        max-width: 250px;
+        max-height: 250px;
+    }
 }

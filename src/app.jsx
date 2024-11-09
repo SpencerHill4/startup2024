@@ -6,8 +6,13 @@ import { Login } from './login/login';
 import { Play } from './play/play';
 import { Scores } from './scores/scores';
 import { About } from './about/about';
+import { AuthState } from './login/authState';
 
 export default function App() {
+    const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+    const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+    const [authState, setAuthState] = React.useState(currentAuthState);
+
     return (
       <BrowserRouter>
         <div className='body bg-dark text-light'>
@@ -18,11 +23,6 @@ export default function App() {
                 Block Bonanza
               </div>
               <menu className='navbar-nav'>
-                <li className='nav-item'>
-                  <NavLink className='nav-link' to=''>
-                    Login
-                  </NavLink>
-                </li>
                 <li className='nav-item'>
                   <NavLink className='nav-link' to='play'>
                     Play
@@ -36,6 +36,11 @@ export default function App() {
                 <li className='nav-item'>
                   <NavLink className='nav-link' to='about'>
                     About
+                  </NavLink>
+                </li>
+                <li className='nav-item' id='login-id'>
+                  <NavLink className='nav-link' to=''>
+                    Login
                   </NavLink>
                 </li>
               </menu>
@@ -52,9 +57,9 @@ export default function App() {
     
           <footer className='bg-dark text-white-50'>
             <div className='container-fluid'>
-              <span className='text-reset'>Author Name(s)</span>
-              <a className='text-reset' href='https://github.com/webprogramming260/simon-react'>
-                Source
+              <span className='text-reset'>Spencer Hill</span>
+              <a className='text-reset' href='https://github.com/SpencerHill4/startup2024'>
+                Github
               </a>
             </div>
           </footer>
