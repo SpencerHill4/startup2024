@@ -7,11 +7,17 @@ import { Play } from './play/play';
 import { Scores } from './scores/scores';
 import { About } from './about/about';
 import { AuthState } from './login/authState';
+import { Authenticated } from './login/authenticated';
 
 export default function App() {
     const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
     const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
     const [authState, setAuthState] = React.useState(currentAuthState);
+
+    function handleLogout() {
+      setAuthState(AuthState.Unauthenticated);
+      setUserName('');
+    }
 
     return (
       <BrowserRouter>
@@ -39,9 +45,12 @@ export default function App() {
                   </NavLink>
                 </li>
                 <li className='nav-item' id='login-id'>
-                  <NavLink className='nav-link' to=''>
-                    Login
-                  </NavLink>
+                  {authState === AuthState.Authenticated ? (
+                    <Authenticated userName={userName} onLogout={handleLogout} />) : (
+                      <NavLink className='nav-link' to='/'>
+                        Login
+                      </NavLink>
+                  )}
                 </li>
               </menu>
             </nav>

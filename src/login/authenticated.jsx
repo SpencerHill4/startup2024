@@ -1,27 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import Button from 'react-bootstrap/Button';
-
 import './authenticated.css';
 
 export function Authenticated(props) {
   const navigate = useNavigate();
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   function logout() {
     localStorage.removeItem('userName');
     props.onLogout();
+    navigate('/');
   }
 
   return (
-    <div>
-      <div className='playerName'>{props.userName}</div>
-      <Button variant='primary' onClick={() => navigate('/play')}>
-        Play
-      </Button>
-      <Button variant='secondary' onClick={() => logout()}>
-        Logout
-      </Button>
+    <div className='authenticated-container'>
+      <div 
+        className={`playerName ${dropdownOpen ? 'active' : ''}`} 
+        onClick={() => setDropdownOpen(!dropdownOpen)}
+      >
+        {props.userName}
+      </div>
+      {dropdownOpen && (
+        <div className='dropdown'>
+          <a href='#' onClick={() => navigate('/profile')}>Profile</a>
+          <a href='#' onClick={logout}>Logout</a>
+        </div>
+      )}
     </div>
   );
 }
