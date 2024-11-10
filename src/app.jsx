@@ -6,6 +6,7 @@ import { Login } from './login/login';
 import { Play } from './play/play';
 import { Scores } from './scores/scores';
 import { About } from './about/about';
+import { Profile } from './profile/profile';
 import { AuthState } from './login/authState';
 import { Authenticated } from './login/authenticated';
 
@@ -74,6 +75,7 @@ export default function App() {
             <Route path='/play' element={<Play />} />
             <Route path='/scores' element={<Scores />} />
             <Route path='/about' element={<About />} />
+            <Route path='/profile' element={<Profile userName={userName} highScore={240} />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
     
