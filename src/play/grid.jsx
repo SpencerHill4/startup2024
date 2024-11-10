@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
-//import './grid.css';
 
-export function Grid({ gridSize }) {
+export function Grid({ gridSize, playerLocation, squares }) {
   const createGrid = () => {
     let grid = [];
     for (let i = 0; i < gridSize * gridSize; i++) {
+        let contents = "";
+        if (i === playerLocation) {
+            contents = <div className='player'></div>;
+        } else if (squares[i] === 'square') {
+            contents = <div className='square'></div>;
+        }
         grid.push(
-            <div key={i} className='space'></div>
+            <div key={i} className='space'>{contents}</div>
         );
     }
 
