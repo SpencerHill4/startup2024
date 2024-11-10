@@ -9,6 +9,7 @@ header {
   height: 80px;
   background-color: rgb(8, 22, 127);
   flex-shrink: 0; /* Prevent header from shrinking */
+  font-size: 18px;
 }
 
 main {
@@ -35,7 +36,7 @@ menu {
 }
 
 .navbar-brand {
-  padding-left: 0.3em;
+  padding-left: 0.7em;
 }
 
 img {
@@ -45,12 +46,12 @@ img {
 }
 
 menu .nav-item {
-  padding: 0 0.3em;
+  padding: 0 1em;
 }
 
 #login-id {
   margin-left: auto;
-  padding: 0 1em;
+  padding: 0 4em;
 }
 
 footer a {
