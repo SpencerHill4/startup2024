@@ -7,8 +7,8 @@ export function Grid({ gridSize, playerLocation, squares }) {
         let contents = "";
         if (i === playerLocation) {
             contents = <div className='player'></div>;
-        } else if (squares[i] === 'square') {
-            contents = <div className='square'></div>;
+        } else if (squares[i].type === 'square') {
+            contents = <div className='square' style={{ width: `${squares[i].growth}%`, height: `${squares[i].growth}%` }}></div>;
         }
         grid.push(
             <div key={i} className='space'>{contents}</div>

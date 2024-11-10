@@ -8,19 +8,19 @@ export function Play() {
   const [gridSize, setGridSize] = useState(3);
   const [score, setScore] = useState(0);
   const [playerPosition, setPlayerPosition] = useState(4);
-  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [squares, setSquares] = useState(Array(9).fill({type: null, growth: 0}));
 
   function reset() {
     setGridSize(3);
     setScore(0);
     setPlayerPosition(4);
-    setSquares(Array(9).fill(null));
+    setSquares(Array(9).fill({type: null, growth: 0}));
   }
 
   function increaseGridSize() {
     console.log("increasing grid size!");
     setGridSize(gridSize + 2);
-    setSquares(Array((gridSize + 2) * (gridSize + 2)).fill(null));
+    setSquares(Array((gridSize + 2) * (gridSize + 2)).fill({type: null, growth: 0}));
   }
 
   function increaseScore() {
@@ -61,11 +61,13 @@ export function Play() {
         default:
           break;
       }
-      if (squares[newPosition] === 'square') {
+      if (squares[newPosition].type === 'square') {
         increaseScore();
-        setSquares(squares.map((square, index) => index === newPosition ? null : square));
+        setSquares(squares.map((square, index) => index === newPosition ? {type: null, growth: 0} : square));
       }
-      setPlayerPosition(newPosition);
+      if (squares[newPosition].growth < 100) {
+        setPlayerPosition(newPosition);
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => {
@@ -76,12 +78,12 @@ export function Play() {
   useEffect(() => {
     const interval = setInterval(() => {
       const newSquares = squares.slice();
-      let emptyIndices = newSquares.map((square, index) => square === null ? index : null).filter(index => index !== null);
+      let emptyIndices = newSquares.map((square, index) => square.type === null ? index : null).filter(index => index !== null);
       if (emptyIndices.length > 0) {
         const randomIndex = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
-        newSquares[randomIndex] = 'square';
-        setSquares(newSquares);
+        newSquares[randomIndex] = { type: 'square', growth: 0 };
       }
+      setSquares(newSquares.map(square => square.type === 'square' && square.growth < 100 ? { ...square, growth: square.growth + 10 } : square));
     }, 2000);
     return () => clearInterval(interval);
   }, [squares]);
