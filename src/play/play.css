@@ -25,26 +25,25 @@ html, body {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     gap: 0;
     width: 90vw;
-    max-width: 420px;
+    max-width: 400px;
     height: 90vw;
-    max-height: 420px;
+    max-height: 400px;
     text-align: center;
     border: 2px solid black;
-}
-
-.space {
+    margin: 20px 0;
+  }
+  
+  .space {
     width: 100%;
     height: 100%;
     border: 2px solid black;
     box-sizing: border-box;
     position: relative;
-}
-
-.square {
+  }
+  
+  .square {
     width: 20%;
     height: 20%;
     background-color: orange;
@@ -53,31 +52,17 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     transition: width 2s, height 2s;
-}
-
-.growing {
+  }
+  
+  .growing {
     width: 100%;
     height: 100%;
-}
-
-.player {
+  }
+  
+  .player {
     background-color: blue;
     position: absolute;
     width: 100%;
     height: 100%;
-}
-
-/* Media query for smaller screens */
-@media (max-height: 600px) {
-    .grid {
-        max-width: 320px;
-        max-height: 320px;
-    }
-}
-
-@media (max-height: 500px) {
-    .grid {
-        max-width: 250px;
-        max-height: 250px;
-    }
-}
+  }
+  
