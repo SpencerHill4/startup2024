@@ -4,7 +4,7 @@ import './play.css';
 export function Play() {
   return (
     <main className="container-fluid text-center">
-      <div>Player: spencerHill4 <span>Score: 240</span></div>
+      <div>Score: 240</div>
       <div className="grid">
         <div className="space"></div>
         <div className="space"><div class="square"></div></div>

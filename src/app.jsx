@@ -30,11 +30,13 @@ export default function App() {
                 Block Bonanza
               </div>
               <menu className='navbar-nav'>
-                <li className='nav-item'>
-                  <NavLink className='nav-link' to='play'>
-                    Play
-                  </NavLink>
-                </li>
+                {authState === AuthState.Authenticated && (
+                  <li className='nav-item'>
+                    <NavLink className='nav-link' to='play'>
+                      Play
+                    </NavLink>
+                  </li>
+                )}
                 <li className='nav-item'>
                   <NavLink className='nav-link' to='scores'>
                     Scores
