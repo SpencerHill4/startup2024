@@ -7,9 +7,17 @@ export function Authenticated(props) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   function logout() {
-    localStorage.removeItem('userName');
-    props.onLogout();
-    navigate('/');
+    fetch(`/api/auth/logout`, {
+      method: 'delete',
+    })
+      .catch(() => {
+
+      })
+      .finally(() => {
+        localStorage.removeItem('userName');
+        props.onLogout();
+        navigate('/');
+      });
   }
 
   return (
