@@ -158,7 +158,8 @@ export function Play({ userName, score, setScore }) {
     const interval = setInterval(() => {
       setIntervalCount(intervalCount + 1);
       const newSquares = squares.slice();
-      let emptyIndices = newSquares.map((square, index) => square.type === null ? index : null).filter(index => index !== null);
+      let emptyIndices = newSquares.map((square, index) => (square.type === null && index !== playerPosition ? index : null)).filter(index => index !== null);
+  
       if (emptyIndices.length <= 2) {
         setGameOver(true);
         clearInterval(interval);
@@ -172,7 +173,7 @@ export function Play({ userName, score, setScore }) {
       if (gridSize > 3) { intervalMin += 200; }
     }, Math.max(intervalMin, intervalAmount - intervalCount * 50));
     return () => clearInterval(interval);
-  }, [squares, intervalCount]);
+  }, [squares, intervalCount, playerPosition]);  
 
   useEffect(() => {
     if (gameOver) {
