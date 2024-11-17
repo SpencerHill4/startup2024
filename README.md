@@ -53,3 +53,17 @@ For this deliverable I properly styled the application into its final appearance
 - **Application elements** - The constrast is good, and the whitespace is good, though it looks best on my laptop.
 - **Application text content** - The fonts are all consistent.
 - **Application images** - The logo has been properly stylized and it is responsive.
+
+## React Delivarable
+For this delivarable I used JavaScript and React so that the app is functional for a single user. I also added placeholders for future technology.
+- **Bundled and transpiled** - Done
+- **Components** - Login, play, profile, scores, about
+   - **Login** - When you press the login button it takes you to the play 
+     page.
+   - **Database** - Display high scores. Currently this is not yet 
+     implemented
+   - **WebSocket** - I will have quote api in the profile page
+   - **Application logic** - The player can play the game using WASD, and 
+     the player can only play the game if they are logged in.
+- **Router** - Routing between login and voting components.
+- **Hooks** - Uses UseState to manage various things such as username, authentication, playerLocation, score, gridSize, etc.
