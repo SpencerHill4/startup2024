@@ -4,9 +4,8 @@ import { useState } from 'react';
 import { Grid } from './grid';
 import './play.css';
 
-export function Play({ userName }) {
+export function Play({ userName, score, setScore }) {
   const [gridSize, setGridSize] = useState(3);
-  const [score, setScore] = useState(0);
   const [playerPosition, setPlayerPosition] = useState(4);
   const [squares, setSquares] = useState(Array(9).fill({ type: null, growth: 0 }));
   const [intervalCount, setIntervalCount] = useState(0);

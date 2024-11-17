@@ -14,6 +14,7 @@ export default function App() {
     const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
     const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
     const [authState, setAuthState] = React.useState(currentAuthState);
+    const [score, setScore] = React.useState(0);
 
     function handleLogout() {
       setAuthState(AuthState.Unauthenticated);
@@ -74,10 +75,10 @@ export default function App() {
               }
               exact
             />
-            <Route path='/play' element={<Play userName={userName} />} />
+            <Route path='/play' element={<Play userName={userName} score={score} setScore={setScore} />} />
             <Route path='/scores' element={<Scores />} />
             <Route path='/about' element={<About />} />
-            <Route path='/profile' element={<Profile userName={userName} highScore={240} />} />
+            <Route path='/profile' element={<Profile userName={userName} highScore={score} />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
     
