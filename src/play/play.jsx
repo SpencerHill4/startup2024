@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Grid } from './grid';
 import './play.css';
 
-export function Play() {
+export function Play({ userName }) {
   const [gridSize, setGridSize] = useState(3);
   const [score, setScore] = useState(0);
   const [playerPosition, setPlayerPosition] = useState(4);
@@ -33,6 +33,16 @@ export function Play() {
   function increaseScore() {
     console.log("Increasing score!");
     setScore(score + 20);
+  }
+
+  async function saveScore(score) {
+    const newScore = { name: userName, score: score };
+
+    await fetch('/api/score', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(newScore),
+    });
   }
 
   useEffect(() => {
@@ -164,6 +174,12 @@ export function Play() {
     }, Math.max(intervalMin, intervalAmount - intervalCount * 50));
     return () => clearInterval(interval);
   }, [squares, intervalCount]);
+
+  useEffect(() => {
+    if (gameOver) {
+      saveScore(score)
+    }
+  }, [gameOver]);
 
   return (
     <main className="container-fluid text-center">
