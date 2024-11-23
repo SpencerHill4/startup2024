@@ -22,7 +22,7 @@ function getUser(username) {
 }
 
 function getUserByToken(token) {
-    return userCollection.findOne({ toke: token });
+    return userCollection.findOne({ token: token });
 }
 
 async function createUser(username, password) {
