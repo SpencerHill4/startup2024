@@ -50,40 +50,47 @@ apiRouter.delete('/auth/logout', (req, res) => {
     res.status(204).end();
 });
 
-apiRouter.get('/scores', (req, res) => {
+const secureApiRouter = express.Router();
+apiRouter.use(secureApiRouter);
+
+secureApiRouter.use(async (req, res, next) => {
+    const authToken = req.cookies[authCookieName];
+    const user = await DB.getUserByToken(authToken);
+    if (user) {
+        next();
+    } else {
+        res.status(401).send({ msg: 'Unauthorized' });
+    }
+});
+
+secureApiRouter.get('/scores', async (req, res) => {
+    const scores = await DB.getHighScores();
     res.send(scores);
 });
 
-apiRouter.post('/score', (req, res) => {
-    scores = updateScores(req.body, scores);
+secureApiRouter.post('/score', async (req, res) => {
+    const score = { ...req.body, ip: req.ip };
+    await DB.addScore(score);
+    const scores = await DB.getHighScores();
     res.send(scores);
+});
+
+app.use(function (err, req, res, next) {
+    res.status(500).send({ type: err.name, message: err.message });
 });
 
 app.use((req, res) => {
     res.sendFile('index.html', {root: 'public'});
 });
 
-app.listen(port, () => {
+function setAuthCookie(res, authToken) {
+    res.cookie(authCookieName, authToken, {
+        secure: true,
+        httpOnly: true,
+        sameSite: 'strict',
+    });
+}
+
+const httpService = app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
-
-function updateScores(newScore, scores) {
-    let found = false;
-    for (const [i, prevScore] of scores.entries()) {
-        if (newScore.score > prevScore.score) {
-            scores.splice(i, 0, newScore);
-            found = true;
-            break;
-        }
-    }
-
-    if (!found) {
-        scores.push(newScore);
-    }
-
-    if (scores.length > 10) {
-        scores.length = 10;
-    }
-
-    return scores;
-}
