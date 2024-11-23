@@ -1,37 +1,44 @@
+const cookieParser = require('cookie-parser');
+const bcrypt = require('bcrypt');
 const express = require('express');
-const uuid = require('uuid');
 const app = express();
+const DB = require('./database.js');
 
-let users = {};
-let scores = [];
+const authCookieName = 'token';
 
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
 
 app.use(express.json());
 
+app.use(cookieParser());
+
 app.use(express.static('public'));
+
+app.set('trust proxy', true);
 
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 apiRouter.post('/auth/create', async (req, res) => {
-    const user = users[req.body.username];
-    if (user) {
-        res.status(409).send({msg:'Existing user'});
+    if (await DB.getUser(req.body.username)) {
+        res.status(409).send({ msg: 'Existing user' });
     } else {
-        const user = {username: req.body.username, password: req.body.password, token: uuid.v4()};
-        user[user.username] = user;
+        const user = await DB.createUser(req.body.username, req.body.password);
 
-        res.send({token: user.token});
+        setAuthCookie(res, user.token);
+
+        res.send({
+            id: user._id,
+        });
     }
 });
 
 apiRouter.post('/auth/login', async (req, res) => {
-    const user = users[req.body.username];
+    const user = await DB.getUser(req.body.username);
     if (user) {
-        if (req.body.password === user.password) {
-            user.token = uuid.v4();
-            res.send({token: user.token});
+        if (await bcrypt.compare(req.body.password, user.password)) {
+            setAuthCookie(res, user.token);
+            res.send({ id: user._id });
             return;
         }
     }
