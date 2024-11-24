@@ -9,6 +9,7 @@ const db = client.db('startup');
 const userCollection = db.collection('user');
 const scoreCollection = db.collection('score');
 
+
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
   await client.connect();
