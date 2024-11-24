@@ -18,7 +18,7 @@ const scoreCollection = db.collection('score');
 });
 
 function getUser(username) {
-    return userCollection.findOne({username: username});
+    return userCollection.findOne({ username: username });
 }
 
 function getUserByToken(token) {
