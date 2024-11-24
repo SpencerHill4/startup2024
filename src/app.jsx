@@ -1,6 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './app.css';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './login/login';
 import { Play } from './play/play';
@@ -9,6 +7,8 @@ import { About } from './about/about';
 import { Profile } from './profile/profile';
 import { AuthState } from './login/authState';
 import { Authenticated } from './login/authenticated';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './app.css';
 
 export default function App() {
     const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
