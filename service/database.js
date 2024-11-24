@@ -5,7 +5,7 @@ const config = require('./dbConfig.json');
 
 const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostname}`;
 const client = new MongoClient(url);
-const db = client.db('simon');
+const db = client.db('startup');
 const userCollection = db.collection('user');
 const scoreCollection = db.collection('score');
 
@@ -34,10 +34,24 @@ async function createUser(username, password) {
     username: username,
     password: passwordHash,
     token: uuid.v4(),
+    highscore: 0,
   };
   await userCollection.insertOne(user);
 
   return user;
+}
+
+async function updateHighScore(username, score) {
+    const user = await userCollection.findOne({ username: username });
+
+    if (user) {
+        if (score > user.highscore) {
+            await userCollection.updateOne(
+                { username: username },
+                { $set: { highscore: score } }
+            );
+        }
+    }
 }
 
 async function addScore(score) {
@@ -58,6 +72,7 @@ module.exports = {
   getUser,
   getUserByToken,
   createUser,
+  updateHighScore,
   addScore,
   getHighScores,
 };

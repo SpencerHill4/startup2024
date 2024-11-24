@@ -1,8 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import './profile.css';
 
-export function Profile({ userName, highScore }) {
+export function Profile({ userName }) {
+  const [highScore, setHighScore] = useState(0);
   const [joke, setJoke] = useState('');
+
+  useEffect(() => {
+    async function fetchUserData() {
+      try {
+        console.log(`Fetching user data for: ${userName}`); // Add this line for debugging
+        const response = await fetch(`/api/user/${userName}`);
+        const userData = await response.json();
+        console.log('User data:', userData); // Add this line for debugging
+        setHighScore(userData.highscore);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    }
+    fetchUserData();
+  }, [userName]);
 
   useEffect(() => {
     async function fetchJoke() {

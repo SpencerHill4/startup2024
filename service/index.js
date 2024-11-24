@@ -74,6 +74,18 @@ secureApiRouter.use(async (req, res, next) => {
   }
 });
 
+// GetUser
+secureApiRouter.get('/user/:username', async (req, res) => {
+  const username = req.params.username;
+  console.log(`Fetching data for user: ${username}`); // Add this line for debugging
+  const user = await DB.getUser(username);
+  if (user) {
+    res.send(user);
+  } else {
+    res.status(404).send({ msg: 'User not found' });
+  }
+});
+
 // GetScores
 secureApiRouter.get('/scores', async (req, res) => {
   const scores = await DB.getHighScores();
@@ -84,6 +96,8 @@ secureApiRouter.get('/scores', async (req, res) => {
 secureApiRouter.post('/score', async (req, res) => {
   const score = { ...req.body, ip: req.ip };
   await DB.addScore(score);
+  await DB.updateHighScore(req.body.name, req.body.score);
+
   const scores = await DB.getHighScores();
   res.send(scores);
 });
