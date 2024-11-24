@@ -54,8 +54,8 @@ For this deliverable I properly styled the application into its final appearance
 - **Application text content** - The fonts are all consistent.
 - **Application images** - The logo has been properly stylized and it is responsive.
 
-## React Delivarable
-For this delivarable I used JavaScript and React so that the app is functional for a single user. I also added placeholders for future technology.
+## React Deliverable
+For this deliverable I used JavaScript and React so that the app is functional for a single user. I also added placeholders for future technology.
 - **Bundled and transpiled** - Done
 - **Components** - Login, play, profile, scores, about
    - **Login** - When you press the login button it takes you to the play 
@@ -67,3 +67,11 @@ For this delivarable I used JavaScript and React so that the app is functional f
      the player can only play the game if they are logged in.
 - **Router** - Routing between login and voting components.
 - **Hooks** - Uses UseState to manage various things such as username, authentication, playerLocation, score, gridSize, etc.
+
+## Service Deliverable
+For this deliverable I added backend endpoints for managing users and scores.
+- **Node.js/Express HTTP service** - done!
+- **Static middleware for frontend** - done!
+- **Calls to third party endpoints** - Third party call to joke api in profile.
+- **Backend service endpoints** - Placeholders for login and scores that stores current user and scores on the server. Endpoints for users and scores.
+- **Frontend calls service endpoints** - I did this using the fetch function.
