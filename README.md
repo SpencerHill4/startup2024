@@ -67,3 +67,20 @@ For this delivarable I used JavaScript and React so that the app is functional f
      the player can only play the game if they are logged in.
 - **Router** - Routing between login and voting components.
 - **Hooks** - Uses UseState to manage various things such as username, authentication, playerLocation, score, gridSize, etc.
+
+## Service Deliverable
+For this deliverable I added backend endpoints that receives allow for creating users and saving scores.
+- **Node.js/Express HTTP service** - Done
+- **Static middleware for frontend** - Done
+- **Calls to third party endpoints** - Done (Joke in profile page)
+- **Backend service endpoints** - Placeholders for login and scores that are stored on the server.
+- **Frontend calls service endpoints** - I did this using fetch functions.
+
+## DB/Login Deliverable
+For this deliverable I associate the player's highscore with the logged in user. I stored the users and scores in the database.
+- **MongoDB Atlas database created** - Done
+- **Stores data in MonogDB** - Done
+- **User registration** - Creates a new account in the database.
+- **Existing user** - Checks database for player, if they exist and password is the same, then they are logged in.
+- **Use MongoDB to store credentials** - Stores both user and scores
+- **Restricts functionality** - You cannot play the game until you have logged in.
