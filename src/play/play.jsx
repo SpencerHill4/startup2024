@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Button } from 'react-bootstrap';
+import { useState } from 'react';
 import { Grid } from './grid';
 import './play.css';
 
@@ -9,13 +10,12 @@ export function Play({ userName, score, setScore }) {
   const [squares, setSquares] = useState(Array(9).fill({ type: null, growth: 0 }));
   const [intervalCount, setIntervalCount] = useState(0);
   const [gameOver, setGameOver] = useState(false);
-  const [currScore, setCurrScore] = useState(0);
   let intervalAmount = 2000;
   let intervalMin = 200;
 
   function reset() {
     setGridSize(3);
-    setCurrScore(0);
+    setScore(0);
     setPlayerPosition(4);
     setSquares(Array(9).fill({ type: null, growth: 0 }));
     setIntervalCount(0);
@@ -31,7 +31,7 @@ export function Play({ userName, score, setScore }) {
 
   function increaseScore() {
     console.log("Increasing score!");
-    setCurrScore(currScore + 20);
+    setScore(score + 20);
   }
 
   async function saveScore(score) {
@@ -45,10 +45,10 @@ export function Play({ userName, score, setScore }) {
   }
 
   useEffect(() => {
-    if (currScore > 0 && currScore % 2500 === 0) {
+    if (score > 0 && score % 2500 === 0) {
       increaseGridSize();
     }
-  }, [currScore]);
+  }, [score]);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -177,10 +177,7 @@ export function Play({ userName, score, setScore }) {
 
   useEffect(() => {
     if (gameOver) {
-      if (currScore > score) {
-        setScore(currScore);
-      }
-      saveScore(currScore);
+      saveScore(score)
     }
   }, [gameOver]);
 
@@ -188,7 +185,7 @@ export function Play({ userName, score, setScore }) {
     <main className="container-fluid text-center">
       <Button onClick={reset}>Reset</Button>
       <div>Controls: {window.navigator.maxTouchPoints > 0 ? "Swipe" : "W A S D"}</div>
-      <div>Score: {currScore}</div>
+      <div>Score: {score}</div>
       {gameOver ? (
         <div>Game Over!</div>
       ) : (
