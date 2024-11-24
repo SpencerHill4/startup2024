@@ -9,7 +9,7 @@ export function Play({ userName, score, setScore }) {
   const [squares, setSquares] = useState(Array(9).fill({ type: null, growth: 0 }));
   const [intervalCount, setIntervalCount] = useState(0);
   const [gameOver, setGameOver] = useState(false);
-  const [currScore, setCurrScore] = useState(0); // Use state for currScore
+  const [currScore, setCurrScore] = useState(0);
   let intervalAmount = 2000;
   let intervalMin = 200;
 
@@ -19,7 +19,7 @@ export function Play({ userName, score, setScore }) {
     setSquares(Array(9).fill({ type: null, growth: 0 }));
     setIntervalCount(0);
     setGameOver(false);
-    setCurrScore(0); // Reset currScore
+    setCurrScore(0);
   }
 
   function increaseGridSize() {
@@ -31,7 +31,7 @@ export function Play({ userName, score, setScore }) {
 
   function increaseScore() {
     console.log("Increasing score!");
-    setCurrScore(currScore + 20); // Increase currScore using state setter
+    setCurrScore(currScore + 20);
   }
 
   async function saveScore(score) {
@@ -177,7 +177,7 @@ export function Play({ userName, score, setScore }) {
 
   useEffect(() => {
     if (gameOver) {
-      if (currScore > score) { // Update score state only if currScore is higher
+      if (currScore > score) {
         setScore(currScore);
       }
       saveScore(currScore);
