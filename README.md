@@ -84,3 +84,10 @@ For this deliverable I associate the player's highscore with the logged in user.
 - **Existing user** - Checks database for player, if they exist and password is the same, then they are logged in.
 - **Use MongoDB to store credentials** - Stores both user and scores
 - **Restricts functionality** - You cannot play the game until you have logged in.
+
+## WebSocket deliverable
+For this deliverable I used WebSocket to notify users when someone gets on the scoreboard.
+- **Backend listens for WebSocket connection** - done!
+- **Frontend makes WebSocket connection** - done!
+- **Data sent over WebSocket connection** - done!
+- **WebSocket data displayed** - All users get notified when someone gets their score on the leaderboard and specifically when someone gets their score as first on the leaderboard.
