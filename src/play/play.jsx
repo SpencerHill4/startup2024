@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Grid } from './grid';
+import { Players } from './players';
+import { GameEvent, GameNotifier } from './gameNotifier';
 import './play.css';
 
 export function Play({ userName, score, setScore }) {
@@ -42,6 +44,8 @@ export function Play({ userName, score, setScore }) {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(newScore),
     });
+
+    GameNotifier.broadcastEvent(userName, GameEvent.End, newScore);
   }
 
   useEffect(() => {
@@ -186,6 +190,7 @@ export function Play({ userName, score, setScore }) {
 
   return (
     <main className="container-fluid text-center">
+      <Players userName={userName} />
       <Button onClick={reset}>Reset</Button>
       <div>Controls: {window.navigator.maxTouchPoints > 0 ? "Swipe" : "W A S D"}</div>
       <div>Score: {currScore}</div>
