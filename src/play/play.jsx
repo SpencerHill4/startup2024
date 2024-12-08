@@ -39,13 +39,25 @@ export function Play({ userName, score, setScore }) {
   async function saveScore(score) {
     const newScore = { name: userName, score: score };
 
+    const topTen = await (await fetch('/api/scores')).json();
+    topTen.sort((a, b) => b - a);
+
+    const topTenScore = topTen[0].score;
+    const bottomTenScore = topTen[topTen.length - 1];
+    console.log("TopTen: " + topTenScore);
+    console.log("BottomTen: " + bottomTenScore);
+    if (score > topTen[0].score) {
+      GameNotifier.broadcastEvent(userName, GameEvent.First, newScore);
+    }
+    else if (score > topTen[topTen.length - 1].score) {
+      GameNotifier.broadcastEvent(userName, GameEvent.Ten, newScore);
+    }
+
     await fetch('/api/score', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(newScore),
     });
-
-    GameNotifier.broadcastEvent(userName, GameEvent.End, newScore);
   }
 
   useEffect(() => {

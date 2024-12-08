@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { GameEvent, GameNotifier } from './gameNotifier';
-import './players.css';
 
 export function Players(props) {
   const userName = props.userName;
@@ -24,17 +23,16 @@ export function Players(props) {
     const messageArray = [];
     for (const [i, event] of events.entries()) {
       let message = 'unknown';
-      if (event.type === GameEvent.End) {
-        message = `scored ${event.value.score}`;
-      } else if (event.type === GameEvent.Start) {
-        message = `started a new game`;
+      if (event.type === GameEvent.Ten) {
+        message = `${event.from} is in the top ten with ${event.value.score}!`;
+      } else if (event.type === GameEvent.First) {
+        message = `${event.from} has the new highest score with ${event.value.score}!`
       } else if (event.type === GameEvent.System) {
         message = event.value.msg;
       }
 
       messageArray.push(
         <div key={i} className='event'>
-          <span className={'player-event'}>{event.from.split('@')[0]}</span>
           {message}
         </div>
       );
@@ -44,8 +42,6 @@ export function Players(props) {
 
   return (
     <div className='players'>
-      Player
-      <span className='player-name'>{userName}</span>
       <div id='player-messages'>{createMessageArray()}</div>
     </div>
   );
