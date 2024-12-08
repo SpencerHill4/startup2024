@@ -16,6 +16,12 @@ function peerProxy(httpServer) {
         const connection = { id: uuid.v4(), alive: true, ws: ws };
         connections.push(connection);
 
+        ws.on('message', function message(data) {
+            connections.forEach((c) => {
+                c.ws.send(data);
+            });
+        });
+
         ws.on('close', () => {
             const pos = connections.findIndex((o, i) => o.id === connection.id);
 
