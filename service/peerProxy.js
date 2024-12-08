@@ -23,5 +23,22 @@ function peerProxy(httpServer) {
                 connections.splice(pos, 1);
             }
         });
+
+        ws.on('pong', () => {
+            connection.alive = true;
+        });
     });
+
+    setInterval(() => {
+        connections.forEach((c) => {
+            if (!c.alive) {
+                c.ws.terminate();
+            } else {
+                c.alive = false;
+                c.ws.ping();
+            }
+        });
+    }, 10000);
 }
+
+module.exports = { peerProxy };
