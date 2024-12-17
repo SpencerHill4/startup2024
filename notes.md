@@ -183,7 +183,7 @@ ssh -i ../keyFileLocation ubuntu@IpAddress
 - Effect Hook: Performs side effects in functional components (useEffect).
 - Performance Hook: Optimizes performance-related functionality (useMemo, useCallback).
 17. Given React Router code, select statements that are true.
-- React Router statements will typically relate to route matching and rendering components based on URL paths. Examples might include <Route path="/home" component={Home} />.
+- React Router statements will typically relate to route matching and rendering components based on URL paths. Examples might include < Route path="/home" component={Home} />.
 18. What does the package.jsonfile do?
 - It contains metadata about the project and its dependencies, scripts, version, and other configurations.
 19. What does the fetch function do?
