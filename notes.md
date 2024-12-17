@@ -151,15 +151,15 @@ ssh -i ../keyFileLocation ubuntu@IpAddress
 - Http-Only Cookie: Not accessible via JavaScript, reducing XSS vulnerabilities.
 - Same-Site Cookie: Restricts how cookies are sent with cross-site requests, providing protection against CSRF attacks.
 5. Assuming the following Express middleware, what would be the console.logoutput for an HTTP GET request with a URL path of /api/document?
-- You'd need to provide the middleware code to answer this accurately. However, typically, middleware logs request information (e.g., console.log('GET /api/document')).
+- Typically, middleware logs request information (e.g., console.log('GET /api/document')).
 6. Given the following Express service code: What does the following front end JavaScript that performs a fetch return?
-- You'd need to provide the Express service code and the front-end fetch code for a specific answer. Generally, fetch returns a Promise that resolves to a Response object.
+- Generally, fetch returns a Promise that resolves to a Response object.
 7. Given the following MongoDB query, select all of the matching documents {name: Mark}
 - This query will return all documents in the collection where the name field is "Mark".
 8. How should user passwords be stored?
 - User passwords should be stored as hashed values using a strong hashing algorithm (e.g., bcrypt) to ensure security.
 9. Assuming the following node.jswebsocket code in the back end, and the following front end websocket code, what will the front end log to the console?
-- Provide the WebSocket code snippets for an accurate prediction. WebSockets typically log connection status or messages exchanged.
+- WebSockets typically log connection status or messages exchanged.
 10. What is the websocket protocol intended to provide?
 - The WebSocket protocol provides full-duplex communication channels over a single TCP connection, enabling real-time data exchange.
 11. What do the following acronyms stand for? JSX, JS, AWS, NPM, NVM
