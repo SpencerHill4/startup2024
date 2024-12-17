@@ -134,3 +134,63 @@ ssh -i ../keyFileLocation ubuntu@IpAddress
 - 80: HTTP
 - 22: SSH
 34. Promises output: Without the specific code snippet, this is hard to say, but Promises handle asynchronous operations, so the output will depend on whether the promise is resolved or rejected.
+
+# Final
+1. What is the default port for HTTP/HTTPS/SSH?
+- HTTP: 80
+- HTTPS: 443
+- SSH: 22
+2. What does an HTTP status code in the range of 300/400/500 indicate?
+- 300 Range: Redirection (e.g., 301 Moved Permanently)
+- 400 Range: Client Error (e.g., 404 Not Found)
+- 500 Range: Server Error (e.g., 500 Internal Server Error)
+3. What does the HTTP header content-type allow you to do?
+- It specifies the media type of the resource (e.g., text/html, application/json) and tells the client how to interpret the data.
+4. What does a “Secure cookie”/”Http-only cookie”/”Same-site cookie” do?
+- Secure Cookie: Only sent over HTTPS connections.
+- Http-Only Cookie: Not accessible via JavaScript, reducing XSS vulnerabilities.
+- Same-Site Cookie: Restricts how cookies are sent with cross-site requests, providing protection against CSRF attacks.
+5. Assuming the following Express middleware, what would be the console.logoutput for an HTTP GET request with a URL path of /api/document?
+- You'd need to provide the middleware code to answer this accurately. However, typically, middleware logs request information (e.g., console.log('GET /api/document')).
+6. Given the following Express service code: What does the following front end JavaScript that performs a fetch return?
+- You'd need to provide the Express service code and the front-end fetch code for a specific answer. Generally, fetch returns a Promise that resolves to a Response object.
+7. Given the following MongoDB query, select all of the matching documents {name: Mark}
+- This query will return all documents in the collection where the name field is "Mark".
+8. How should user passwords be stored?
+- User passwords should be stored as hashed values using a strong hashing algorithm (e.g., bcrypt) to ensure security.
+9. Assuming the following node.jswebsocket code in the back end, and the following front end websocket code, what will the front end log to the console?
+- Provide the WebSocket code snippets for an accurate prediction. WebSockets typically log connection status or messages exchanged.
+10. What is the websocket protocol intended to provide?
+- The WebSocket protocol provides full-duplex communication channels over a single TCP connection, enabling real-time data exchange.
+11. What do the following acronyms stand for? JSX, JS, AWS, NPM, NVM
+- JSX: JavaScript XML
+- JS: JavaScript
+- AWS: Amazon Web Services
+- NPM: Node Package Manager
+- NVM: Node Version Manager
+12. Assuming an HTML document with a body element. What text content will the following React component generate?
+- Without the specific React component code, it’s difficult to say. Generally, the component will render text content based on its parameters and state.
+13. Given a set of React components that include each other, what will be generated?
+- It will depend on the specific structure and relationships between the components. Typically, the root component will render its child components in a nested fashion.
+14. What does a React component with React.useState do?
+- React.useState is a Hook that allows you to add state to functional components. It returns an array with the current state and a function to update it.
+15. What are React Hooks used for?
+- React Hooks are used to manage state and side effects in functional components, allowing them to have features previously only available to class components.
+16. What does the State Hook/Context Hook/Ref Hook/Effect Hook/Performance Hook do?
+- State Hook: Manages state in functional components (useState).
+- Context Hook: Consumes context within functional components (useContext).
+- Ref Hook: Accesses DOM elements and persists values (useRef).
+- Effect Hook: Performs side effects in functional components (useEffect).
+- Performance Hook: Optimizes performance-related functionality (useMemo, useCallback).
+17. Given React Router code, select statements that are true.
+- React Router statements will typically relate to route matching and rendering components based on URL paths. Examples might include <Route path="/home" component={Home} />.
+18. What does the package.jsonfile do?
+- It contains metadata about the project and its dependencies, scripts, version, and other configurations.
+19. What does the fetch function do?
+- It makes network requests to retrieve resources (e.g., data from an API) and returns a Promise that resolves to a Response object.
+20. What does node.js do?
+- Node.jsis a JavaScript runtime that allows you to execute JavaScript on the server side, outside of a web browser.
+21. What does pm2 do?
+- PM2 is a process manager for Node.jsapplications, used to manage and keep applications running in production.
+22. What does Vite do?
+- Vite is a build tool that provides a faster and leaner development experience for modern web projects by leveraging native ES modules.
